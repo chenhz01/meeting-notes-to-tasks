@@ -2,6 +2,8 @@
 
 meeting-notes-to-tasks extracts action items from meeting notes into a validated `{text, owner, due}` task schema, with a completeness report (errors, warnings, per-line provenance). Deliberately regex-and-rules, not AI: deterministic, offline, and free. Use it to turn bullet lists and TODO lines into a checkable task list instead of letting action items evaporate after the call. Confidence: High (≥80%) for the documented extraction patterns, per the 58-check suite.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Meeting notes record action items as bullets, "TODO:" lines, and asides with owners and dates scattered in parentheses. Nobody converts them while context is fresh; a week later the notes are archaeology. LLM-based extractors solve this at the cost of API keys, non-determinism, and hallucinated owners. What is missing is a strict offline extractor that *refuses to invent* — it only reports what the text literally contains, then flags what is incomplete.
